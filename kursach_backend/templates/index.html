@@ -1,18 +1,70 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/JavaScript">
         <!--
         function AutoRefresh( t ){
             setTimeout("location.reload(true);", t);
         }
         //-->
+
+
+
     </script>
 </head>
 <body onload="JavaScript:AutoRefresh(1000);">
-{% if data == '' %}
-<p>no data</p>
-{# else %}
-<p>{{ data }}</p>
-{% endif %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Termperature</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Temperature C</h5>
+
+                    {% if data == '' %}
+                    <h6 class="card-subtitle mb-2 text-muted">no data</h6>
+                    {% else %}
+                    <h6 class="card-subtitle mb-2 text-muted">{{ data }}</h6>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Location</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Lviv</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">District</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Levanda</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
